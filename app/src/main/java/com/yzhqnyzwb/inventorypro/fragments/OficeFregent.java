@@ -9,7 +9,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,7 +28,7 @@ public class OficeFregent extends Fragment {
     TextView tvinvestmetn;
     TextView tvVat;
     TextView tvProfit;
-    ProgressBar pbOfice;
+   // ProgressBar pbOfice;
 
     public OficeFregent() {
         // Required empty public constructor
@@ -47,6 +46,7 @@ public class OficeFregent extends Fragment {
                 tvProfit=(TextView) v.findViewById(R.id.tvProfitNum);
                // pbOfice=(ProgressBar) v.findViewById(R.id.progressBarOfice);
         final ProgressDialog dialog = ProgressDialog.show(getActivity(), "Loading...", "Please wait...", true);
+
 
 
         final FirebaseUser currntUser= FirebaseAuth.getInstance().getCurrentUser();
@@ -83,6 +83,7 @@ public class OficeFregent extends Fragment {
                 tvinvestmetn.setText(d+"");
                 tvVat.setText(d1+"");
                 tvProfit.setText(d2+"");
+                dialog.dismiss();
 
             }
 
@@ -91,7 +92,6 @@ public class OficeFregent extends Fragment {
 
             }
         });
-        dialog.dismiss();
         return v;
 
 
