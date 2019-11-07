@@ -209,9 +209,9 @@
 
     <ProgressBar
         android:id="@+id/progressBarOfice"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="100"
-        android:layout_height="100"
+        style="?attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
